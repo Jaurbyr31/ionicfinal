@@ -1,0 +1,53 @@
+.content {
+    position: relative;
+    overflow: hidden; /* Para evitar que la imagen de fondo se desplace cuando el contenido aumenta */
+}
+  
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca la imagen de fondo detrás de otros elementos */
+}
+
+ion-content {
+    align-items: center;
+}  
+
+#formulario {
+    margin: auto;
+    margin-top: 65%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+#formulario ion-header{
+    background-color: #EA9010;
+    color: white;
+}
+
+#formulario ion-button[type="submit"] {
+    --background: #EA9010;
+    --color: white;
+    --border-radius: 10px;
+}
+
+#login{
+    text-align: center;
+    align-items: center;
+    background-color: #EA9010;
+    color: white;
+    height: 50px;
+    padding-top: 20px;
+}
+
+#Ingresar{
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    padding-inline-end: 20px;
+}

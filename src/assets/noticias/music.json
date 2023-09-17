@@ -1,0 +1,43 @@
+[
+    {
+        "audios": [
+            {
+                "direcionAudio": "../../assets/music/Akaza vs Tanjiro.mp3",
+                "nombreAudio": "Akaza vs Tanjiro Rap"
+            },
+            {
+                "direcionAudio": "../../assets/music/BLAKE RESET.mp3",
+                "nombreAudio": "Blake Reset"
+            },
+            {
+                "direcionAudio": "../../assets/music/Halloween Rap Kronno Zomber.mp3",
+                "nombreAudio": "Halloween Rap Kronno Zomber"
+            },
+            {
+
+                "direcionAudio": "../../assets/music/Idol Yoasobi.mp3",
+                "nombreAudio": "Yoasobi Idol"
+            },
+            {
+                "direcionAudio": "../../assets/music/Numb Linkin Park.mp3",
+                "nombreAudio": "Numb Linkin Park"
+            },
+            {
+                "direcionAudio": "../../assets/music/Rebeldes Cyberpunk JayF.mp3",
+                "nombreAudio": "Rebeldes Cyberpunk"
+            },
+            {
+                "direcionAudio": "../../assets/music/Skillet - Feel Invincible.mp3",
+                "nombreAudio": "Feel Invincible"
+            },
+            {
+                "direcionAudio": "../../assets/music/Skillet - Monster.mp3",
+                "nombreAudio": "Monster"
+            },
+            {
+                "direcionAudio": "../../assets/music/Katyusha.mp3",
+                "nombreAudio": "Katyusha / Слава Україні"
+            }
+        ]             
+    }
+]

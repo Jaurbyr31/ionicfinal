@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title slot="start">Detalle_photo</ion-title>
+    <ion-button (click)="back()" slot="end">volver</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <img src="{{imageSource}}">
+    <ion-card-header>
+      <ion-card-title>Titulo: {{titulo}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Descripcion: {{Descripcion}}
+    </ion-card-content>
+  
+    <div class="rating-container">
+      <ion-icon
+        *ngFor="let star of stars"
+        [name]="star.iconName"
+        (click)="rate(star.value)"
+      ></ion-icon>
+    </div>
+
+    <div class="selected-rating">
+      Calificación seleccionada: {{ selectedRating }}
+    </div>
+  </ion-card>
+
+</ion-content>

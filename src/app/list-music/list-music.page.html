@@ -1,0 +1,65 @@
+<ion-content [fullscreen]="true">
+<img width="450" height="200" src="../../assets/icon/fondo.png" alt="" class="background">
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-title color="success">Lista de Audio</ion-title>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterMusic(searchTerm)"></ion-searchbar>
+
+  <ion-card *ngFor="let audio of listvideos" >
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <ion-text color="606060">
+            <h2>
+              Nombre: {{audio.nombreAudio}}
+            </h2>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+
+      <ion-col>
+        <audio controls><source width="450" height="200" src="{{audio.direcionAudio}}"></audio>
+      </ion-col>     
+    </ion-card-content>
+  </ion-card>
+
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-title color="success" lines="">Lista de Videos</ion-title>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  <ion-grid [fixed]="true">
+    <ion-row>
+        <iframe width="450" height="200" src="https://www.youtube.com/embed/Es_xmX57HgU?si=oX2VpaUI9SmqueUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; speaker" allowfullscreen></iframe><br>
+        <iframe width="450" height="200" src="https://www.youtube.com/embed/qMXESlny4-I?si=1FYwyHK_pQK76g8n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+        <iframe width="450" height="200" src="https://www.youtube.com/embed/V9_ZpqfqHFI?si=Af8kwByFvb8xSYR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; speaker" allowfullscreen></iframe><br>
+        <iframe width="450" height="200" src="https://www.youtube.com/embed/qWXPNyt6oTE?si=C1qGrxOvH4PGMKbT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; speaker" allowfullscreen></iframe><br>
+        <iframe width="450" height="200" src="https://www.youtube.com/embed/dWfEadR11AA?si=-UaXnhlNc8gr02Fx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; speaker" allowfullscreen></iframe><br>
+        <iframe width="450" height="200" src="https://www.youtube.com/embed/Rf33uAOPHYs?si=PTvxaedheL5Rn28u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; speaker" allowfullscreen></iframe><br>
+      </ion-row>
+  </ion-grid>
+  
+</ion-content>
+
+<ion-footer>
+  <div id="footer">
+    <ion-toolbar color="warning">
+      <div class="ion-text-center">
+        <ion-icon name="volume-high-outline" (click)="back()"></ion-icon><br>
+      </div>
+    </ion-toolbar>
+  </div>
+</ion-footer>

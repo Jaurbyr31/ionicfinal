@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" class="content">
+
+  <img src="../../assets/icon/fondo.png" alt="" class="background">
+
+  <form (ngSubmit)="irImagenes()">
+    <ion-item>
+      <ion-label position="floating">titulo:</ion-label>
+      <ion-input type="text" [(ngModel)]="titulo" name="titulo" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripción:</ion-label>
+      <ion-input type="text" [(ngModel)]="Descripcion" name="Descripcion"></ion-input>
+    </ion-item>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="takePicture()">
+        <ion-icon name="camera-outline"></ion-icon>
+        Tomar foto
+      </ion-tab-button>
+    </ion-tab-bar>
+
+    <div id="Photo" >
+      <img [src]="imageSource" />
+    </div>
+
+    <div>
+      <ion-button type="submit" slot="start"> Subir foto </ion-button>
+      <ion-button (click)="back()" slot="end"> Cancelar envio </ion-button>
+    </div>
+  </form>
+  
+</ion-content>
+
+<ion-footer>
+  <div id="footer">
+    <ion-toolbar color="warning">
+      <div class="ion-text-center">
+        <ion-icon name="camera-outline" (click)="back()" id="camera"></ion-icon><br>
+      </div>
+    </ion-toolbar>
+  </div>
+</ion-footer>

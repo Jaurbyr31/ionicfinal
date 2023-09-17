@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true" class="content">
+
+  <img src="../../assets/icon/fondo.png" alt="" class="background">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-title>Imagenes</ion-title>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  <ion-card *ngIf="receivedImageSource !== undefined">
+
+    <div class="card-bg" *ngIf="receivedImageSource" [style.backgroundImage]="'url(' + receivedImageSource + ')'"></div>
+    
+    <div class="content-overlay">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2>{{ receivedTitulo }}</h2>
+            <p>{{ receivedDescripcion }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <div *ngIf="reciveSelectedRating !== 0">
+        <h5>Calificación: <ion-icon slot="end" *ngFor="let _ of getStarsArray(reciveSelectedRating)" name="star-sharp"></ion-icon></h5>  
+      </div>
+    
+      <ion-button slot="start" (click)="irDetalle()">Calificar</ion-button>
+    </div>
+  </ion-card>
+  
+</ion-content>
+
+<ion-footer>
+  <div id="footer">
+    <ion-toolbar color="warning">
+      <div class="ion-text-center">
+        <ion-icon name="add-outline" (click)="irFormulario()" id="camera"></ion-icon><br>
+      </div>
+    </ion-toolbar>
+  </div>
+</ion-footer>

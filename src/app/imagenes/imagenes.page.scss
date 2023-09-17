@@ -1,0 +1,72 @@
+.content {
+    position: relative;
+    overflow: hidden; /* Para evitar que la imagen de fondo se desplace cuando el contenido aumenta */
+}
+  
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca la imagen de fondo detrás de otros elementos */
+    opacity: 0.3;
+}
+
+  
+/* Aca se editan los botones */
+#fondox{
+    margin: 10px;
+    background: white;
+    border-radius: 15px;/* Agrega esquinas redondeadas */
+    border: 2px solid #ea9016;
+    border-color: #ea9016;
+}
+
+.custom-tab-button {
+    margin: 10px;
+    background-color: #fd0505 !important; /* Cambia el color de fondo */
+    color: #ea9016; /* Cambia el color del texto */
+    font-size: 19px; /* Cambia el tamaño de fuente */
+    border-radius: 10px; /* Agrega esquinas redondeadas */
+}
+
+.custom-tab-button ion-icon {
+  font-size: 45px; /* Cambia el tamaño del ícono */
+}
+
+/*Estilo de las fotos*/
+ion-title{
+    color: white;
+    background-color: #ea9016;
+    border-radius: 20px;
+}
+
+.card-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca la imagen detrás de otros elementos */
+    background-size: 100% 100%;
+    background-position: center;
+}
+.content-overlay {
+    position: relative;
+    padding: 20px; /* Ajusta el espaciado según sea necesario */
+    z-index: 1; /* Coloca el contenido encima de la imagen de fondo */
+    color: #fff; /* Cambia el color del texto para que se vea bien en la imagen de fondo */
+}
+  
+#camera{
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white; /* Agregar borde blanco de 2px */
+
+}
+

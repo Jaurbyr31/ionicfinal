@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true" class="content">
+<img src="../../assets/icon/fondo.png" alt="" class="background">
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div class="ion-text-center">
+        <ion-title>LISTA DE POKEMONES</ion-title>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterPokemones(searchTerm)"></ion-searchbar>
+
+    <ion-card *ngFor="let notis of listPokemones" (click)="navigate(notis)">
+      
+      <ion-card-content class="poked">
+        <ion-grid fixed >
+
+          <ion-row >
+            
+            <ion-col size="6">
+              <img src={{notis.url_imag}} alt="img">
+            </ion-col>
+
+            <ion-col size="6">
+              <ion-text>
+                <h2>{{notis.nombre}}
+                  <br>
+                  <br>
+                  <br>
+                  {{notis.categoria}}
+                </h2>
+              </ion-text>
+            </ion-col>
+            
+          </ion-row>
+
+        </ion-grid>
+
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <div id="footer">
+    <ion-toolbar color="warning">
+      <div class="ion-text-center">
+        <img src="../../assets/icon/pokeball.png" id="camera" (click)="back()">
+      </div>
+    </ion-toolbar>
+  </div>
+</ion-footer>
